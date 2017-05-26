@@ -1,0 +1,93 @@
+nav{
+  background-color: white;
+  background-color: rgba(0,0,0,0.87);
+  overflow: hidden;
+}
+
+.tabrow{
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 24px;
+}
+
+.tabrow:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #AAA;
+  z-index: 1;
+}
+
+.tabrow:before{
+  z-index: 1;
+}
+
+.tabrow li{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  color: white;
+  background: linear-gradient(to bottom, #666 50%, #555 100%);
+  border: 0.1em solid #AAA;
+  padding: 0.7em 1em;
+  margin: 0 -0.2em;
+  z-index: 0;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+  text-shadow: 0 1px black;
+  outline: 0;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.tabrow li:after,
+.tabrow li:before{
+  content: " ";
+  position: absolute;
+  bottom: -1px;
+  width: 0.5em;
+  height: 0.5em;
+  border: 1px solid #AAA;
+}
+
+.tabrow li:after{
+  right: -0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-width: 0 0 1px 1px;
+  box-shadow: -0.15em 0.15em 0 #555;
+}
+
+.tabrow li:before{
+  left: -0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-width: 0 1px 1px 0;
+  box-shadow: 0.15em 0.15em 0 #555;
+}
+
+.tabrow li.selected{
+  color: black;
+  background: linear-gradient(to bottom, #ECECEC 50%, white 100%);
+  text-shadow: 0 1px white;
+  border-bottom-color: white;
+  z-index: 2;
+}
+
+.tabrow li.selected:after{
+  box-shadow: -0.15em 0.15em 0 white;
+}
+
+.tabrow li.selected:before{
+  box-shadow: 0.15em 0.15em 0 white;
+}

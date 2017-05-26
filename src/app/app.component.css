@@ -1,0 +1,11 @@
+
+.page{
+  max-width: 80em;
+  height: 60em;
+  margin: 2em auto;
+  background-color: white;
+  border-width: 0.08em;
+  border-style: solid;
+  border-color: #111;
+  box-shadow: 10px 10px 5px #888888;
+}

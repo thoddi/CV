@@ -1,0 +1,26 @@
+.header{
+  color: white;
+  background-color: rgba(0,0,0,0.87);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+img{
+  display: block;
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  width: 60%;
+  max-width: 40em;
+  margin: 2em auto;
+}
+.header_text{
+  display: inline-block;
+  text-align: center;
+}
+.header_text h2{
+  border-top: 2px solid white;
+  margin: 0 25%;
+  padding-top: 5px;
+}

@@ -1,42 +1,71 @@
-.content{
-  background-color: black;
-  width: 90%;
-  height: 30em;
-  margin: 2em;
-  background: linear-gradient(to left, #222 30%, #333 100%);
-  box-shadow: 0.5em 0.5em 5px #888888;
-}
-.nav{
-  float: left;
-  width: calc(35% - 0.5em);
-  margin: 0.5em 0 0 0.5em;
-}
-.nav li{
-  color: white;
-  min-width: 10em;
-  padding: 1em;
-  border-bottom: 1px solid white;
-}
-.last{
-  border-bottom: 1px solid black;
-}
-.text{
-  float: right;
-  width: 65%;
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100%;
-}
-.text div{
-  background-color: white;
-  margin: 0.5em 0.5em 0.5em 0;
-  height: calc(100% - 1em);
-  padding: 1em;
-}
-.nav li.selected{
-  background: linear-gradient(to right, #888888 0%, white 10%);
-  color: black;
-}
-img{
-  display: block;
   width: 100%;
-  margin: 1em auto;
+  background: url(/assets/ComputerScience.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*filter: blur(0px);
+  -webkit-filter: blur(3px);*/
+}
+
+.border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: calc(1.1vw + 0.4em) solid white;
+}
+
+.curve {
+  border-radius: calc(2* (1.1vw + 0.4em));
+}
+
+#filter {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#content {
+  position: relative;
+  margin: 0 10% 0 10%;
+  padding-bottom: 3em;
+}
+
+#content h1 {
+  margin-top: 3em;
+  font-size: calc(3vw + 2em);
+  font-weight: bold;
+  font-family: Arial;
+  color: orange;
+}
+
+#content h2 {
+  font-size: calc(1.5vw + 1.3em);
+  font-weight: bold;
+  color: white;
+}
+
+#content p {
+  margin-top: 1.5em;
+  line-height: 1;
+  font-size: calc(3vw + 1em);
+  font-family: Arial;
+  color: white;
+}
+
+#content p strong {
+  font-weight: normal;
+  color: orange;
+}
+
+br.space {
+  line-height: 2;
 }

@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  min-height: 15em;
 }
 img{
   display: block;
@@ -11,9 +12,8 @@ img{
   border-style: solid;
   border-color: white;
   border-radius: 50%;
-  width: 60%;
-  max-width: 40em;
-  margin: 2em auto;
+  width: 15em;
+  margin: 1em auto;
 }
 .header_text{
   display: inline-block;

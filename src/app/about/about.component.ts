@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  public filter: number
+
+  constructor() {
+    this.filter = 0;
+  }
 
   ngOnInit() {
   }
+
+  /*window.onscroll = function(e) {
+
+  }*/
 
 }

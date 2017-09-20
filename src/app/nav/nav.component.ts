@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
   menuIsActive: boolean;
 
   constructor() {
-    this.menuIsActive = true;
+    this.menuIsActive = false;
     this.currentTab = "home";
   }
 

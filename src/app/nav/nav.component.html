@@ -1,14 +1,19 @@
 <nav>
-  <ul class="tabrow">
-    <li id="about" class="selected" (click)="onClick('about')"
-        [routerLink]="['/about']">Um mig</li>
-    <li id="education" (click)="onClick('education')"
-        [routerLink]="['/education']">Menntun</li>
-    <li id="experience" (click)="onClick('experience')"
-        [routerLink]="['/experience']">Starfsreynsla</li>
-    <li id="knowledge" (click)="onClick('knowledge')"
-        [routerLink]="['/knowledge']">Þekking</li>
-    <li id="projects" (click)="onClick('projects')"
-        [routerLink]="['/projects']">Verkefni</li>
-  </ul>
+  <div id="menu" (click)="onExpand()">=</div>
+  <div id="panel" [class.inactive]="!menuIsActive" [class.active]="menuIsActive">
+    <ul>
+      <li id="home" [class.selected]="isCurrentTab('home')"
+                    (click)="onClick('home')"
+                    [routerLink]="['']">Home</li>
+      <li id="about" [class.selected]="isCurrentTab('about')"
+                    (click)="onClick('about')"
+                    [routerLink]="['/about']">About</li>
+      <li id="experience" [class.selected]="isCurrentTab('experience')" (click)="onClick('experience')"
+          [routerLink]="['/experience']">CV</li>
+      <li id="knowledge" [class.selected]="isCurrentTab('knowledge')" (click)="onClick('knowledge')"
+          [routerLink]="['/knowledge']">Contact</li>
+      <li id="projects" [class.selected]="isCurrentTab('projects')" (click)="onClick('projects')"
+          [routerLink]="['/projects']">Projects</li>
+    </ul>
+  </div>
 </nav>

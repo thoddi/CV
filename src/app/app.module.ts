@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
-import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { BorderComponent } from './border/border.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +19,10 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     NavComponent,
     AboutComponent,
-    EducationComponent,
     ExperienceComponent,
     KnowledgeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BorderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,12 +30,11 @@ import { ProjectsComponent } from './projects/projects.component';
     HttpModule,
     RouterModule.forRoot([
       { path: 'about', component: AboutComponent },
-      { path: 'education', component: EducationComponent },
       { path: 'experience', component: ExperienceComponent },
       { path: 'knowledge', component: KnowledgeComponent },
       { path: 'projects', component: ProjectsComponent },
-      { path: '', redirectTo: 'about', pathMatch: 'full' },
-      { path: '**', redirectTo: 'about', pathMatch: 'full' }
+      { path: '', component: HeaderComponent },
+      { path: '**', redirectTo: '', pathMatch: 'full' }
     ])
   ],
   providers: [],

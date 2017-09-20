@@ -1,0 +1,14 @@
+.border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: calc(1.1vw + 0.4em) solid white;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.curve {
+  border-radius: calc(2* (1.1vw + 0.4em));
+}

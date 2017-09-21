@@ -51,6 +51,11 @@ nav {
   text-transform: uppercase;
 }
 
+#github>a>img {
+  height: 1em;
+  width: 1em;
+}
+
 .linethrough {
   text-decoration: line-through white;
 }

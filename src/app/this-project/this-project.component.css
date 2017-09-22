@@ -1,0 +1,12 @@
+div {
+  margin: 0 10%;
+  margin-top: 8em;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: calc(1.5vw + 1.5em);
+}

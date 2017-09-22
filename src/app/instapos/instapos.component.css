@@ -1,0 +1,41 @@
+div {
+  margin: 8em 10%;
+}
+
+#banner {
+  margin: 0;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 27vw;
+  min-height: 13em;
+  background: url(/assets/valitorbanner.jpg) no-repeat top center;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+p {
+  font-size: calc(1.5vw + 1.5em);
+}
+
+#images {
+  margin: 0 calc(2vw - 2em);
+  text-align: center;
+}
+
+img {
+  display: inline-block;
+  width: calc(100% - 4em);
+  max-width: 25em;
+  margin: 1em;
+}
+
+@media screen and (min-width: 560px) {
+  #banner {
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+  }
+}

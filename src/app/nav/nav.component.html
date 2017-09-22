@@ -5,6 +5,9 @@
       <li id="home" [class.selected]="isCurrentTab('home')"
                     (click)="onClick('home')"
                     [routerLink]="['']">Home</li>
+      <li id="projects" [class.selected]="isCurrentTab('projects')"
+                    (click)="onClick('projects')"
+                    [routerLink]="['/projects']">Projects</li>
       <li id="about" [class.selected]="isCurrentTab('about')"
                     class="linethrough"
                     (click)="onClick('about')"
@@ -17,15 +20,6 @@
                     class="linethrough"
                     (click)="onClick('knowledge')"
                     [routerLink]="['/knowledge']">Contact</li>
-      <li id="projects" [class.selected]="isCurrentTab('projects')"
-                    class="linethrough"
-                    (click)="onClick('projects')"
-                    [routerLink]="['/projects']">Projects</li>
-      <li id="github">
-        <a href="https://github.com/thoddi/cv">
-          <img src="https://major.io/wp-content/uploads/2014/08/github.png"/>
-        </a>
-      </li>
     </ul>
   </div>
 </nav>

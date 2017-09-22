@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  background-color: gray;
+  color: white;
+  background-color: rgb(50, 50, 50);
+}
+
+strong {
+  font-weight: normal;
+  color: orange;
+}
+
+h1 {
+  font-size: calc(3vw + 2em);
+  font-weight: bold;
+  color: orange;
+}
+
+a {
+  font-size: calc(2vw + 1.7em);
+  color: darkorange;
 }

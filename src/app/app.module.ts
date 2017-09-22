@@ -12,6 +12,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BorderComponent } from './border/border.component';
+import { ThisProjectComponent } from './this-project/this-project.component';
+import { InstaposComponent } from './instapos/instapos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BorderComponent } from './border/border.component';
     ExperienceComponent,
     KnowledgeComponent,
     ProjectsComponent,
-    BorderComponent
+    BorderComponent,
+    ThisProjectComponent,
+    InstaposComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,8 @@ import { BorderComponent } from './border/border.component';
       { path: 'experience', component: ExperienceComponent },
       { path: 'knowledge', component: KnowledgeComponent },
       { path: 'projects', component: ProjectsComponent },
+      { path: 'projects/this-project', component: ThisProjectComponent },
+      { path: 'projects/instapos', component: InstaposComponent },
       { path: '', component: HeaderComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' }
     ])

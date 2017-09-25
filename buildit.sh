@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ng build --prod
+ng build --prod  --bh https://thoddi.github.io/cv/
 
 rm -rf docs
 

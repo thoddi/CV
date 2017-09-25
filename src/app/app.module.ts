@@ -41,7 +41,7 @@ import { InstaposComponent } from './instapos/instapos.component';
       { path: 'projects/instapos', component: InstaposComponent },
       { path: '', component: HeaderComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' }
-    ])
+    ], {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,15 @@
 <nav>
-  <div id="menu" (click)="onExpand()">=</div>
+  <div id="menu" (click)="onExpand()">
+    <div id="line1" class="hamburger"
+                    [class.inactive]="!menuIsActive"
+                    [class.active]="menuIsActive"></div>
+    <div id="line2" class="hamburger"
+                    [class.inactive]="!menuIsActive"
+                    [class.active]="menuIsActive"></div>
+    <div id="line3" class="hamburger"
+                    [class.inactive]="!menuIsActive"
+                    [class.active]="menuIsActive"></div>
+  </div>
   <div id="panel" [class.inactive]="!menuIsActive" [class.active]="menuIsActive">
     <ul>
       <li id="home" [class.selected]="isCurrentTab('home')"

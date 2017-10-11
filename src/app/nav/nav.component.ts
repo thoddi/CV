@@ -32,8 +32,6 @@ export class NavComponent implements OnInit {
   //navigates to the selected tab.
   onClick(i: string): void{
     console.log("selected: " + i);
-    //document.getElementById(this.currentTab).className = "";
-    //document.getElementById(i).className = "selected";
     this.currentTab = i;
     this.menuIsActive = false;
   }

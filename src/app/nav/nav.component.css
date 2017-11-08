@@ -3,7 +3,6 @@ nav {
   right: 0;
   top: 0;
   width: 2em;
-  background-color: green;
 }
 #menu {
   cursor: pointer;
@@ -80,4 +79,10 @@ nav {
 
 .linethrough {
   text-decoration: line-through white;
+}
+
+@media screen and (max-height: 360px) {
+  #panel{
+    overflow-y: scroll;
+  }
 }

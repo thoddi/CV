@@ -1,3 +1,69 @@
-<p>
-  experience works!
-</p>
+<div id="page">
+  <h1 class="wrappers">
+    &lt;education&gt;
+  </h1>
+
+  <ul>
+    <li>
+      <div class="block" #RU (mouseover)="expandDescription(RU)"
+                              (mouseleave)="collapseDescription(RU)">
+        <h3>2013 - 2017 | Reykjavik University</h3>
+        <h2>Bachelor Degree in Computer Science</h2>
+        <div class="wrapper">
+          <h3 class="description">Programming was generally taught with C++. I personally focused on Object
+  oriented C++ and web development. Besides the usual combination of
+  HTML, CSS and JS; my web development study consisted of AngularJS,
+  Node.JS and ASP.NET Core.</h3>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block" #COK (mouseover)="expandDescription(COK)"
+                              (mouseleave)="collapseDescription(COK)">
+        <h3>2008 – 2012 | College of Kopavogur</h3>
+        <h2>Business and Economics</h2>
+        <div class="wrapper">
+          <h3 class="description">Along with my business/economic classes I took 4 classes in C# and SQL.</h3>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h1 class="wrappers">
+    &lt;/education&gt;
+  </h1>
+
+  <h1 class="wrappers">
+    &lt;experience&gt;
+  </h1>
+
+  <ul>
+    <li>
+      <div class="block" #VAL (mouseover)="expandDescription(VAL)"
+                              (mouseleave)="collapseDescription(VAL)">
+        <h3>2016 | Final Project - Valitor</h3>
+        <h2>Programmer / UI designer</h2>
+        <div class="wrapper">
+          <h3 class="description">As a final project at Reykjavik University, I developed a POS app for Valitor,
+a payment acquirer. The app was developed in Xamarin and the web service
+was written in .Net.</h3>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block" #EL (mouseover)="expandDescription(EL)"
+                              (mouseleave)="collapseDescription(EL)">
+        <h3>2013 – Present | ELKO</h3>
+        <h2>Salesman</h2>
+        <div class="wrapper">
+          <h3 class="description">As a salesman, I have evolved good communication skills, both for
+understanding the customer‘s needs and to get things done with peers.</h3>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h1 class="wrappers">
+    &lt;/experience&gt;
+  </h1>
+</div>

@@ -1,3 +1,48 @@
-p {
-  margin: 50% 50%;
+#page {
+  margin: 10em 10vw;
+  color: white;
+}
+
+.wrappers {
+  font-size: calc(3vw + 2em);
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 3em 0;
+}
+
+h2 {
+  font-size: calc(5.5vw + 1em);
+  margin: 0 0 0.1em 0;
+}
+
+h3 {
+  font-size: calc(0.5vw + 1.2em);
+  margin: 0;
+}
+
+.block {
+  background-color: rgba(256,256,256,0.1);
+  padding: 1em;
+  transition: 600ms ease;
+}
+
+.block:hover {
+  background-color: white;
+  color: black;
+}
+
+.wrapper{
+  height: 0px;
+  overflow: hidden;
+  transition: 600ms ease;
+}
+
+.description {
+  max-width: 40em;
 }

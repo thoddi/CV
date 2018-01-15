@@ -8,14 +8,6 @@
   font-weight: normal;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 3em 0;
-}
-
 h2 {
   font-size: calc(5.5vw + 1em);
   margin: 0 0 0.1em 0;
@@ -29,6 +21,8 @@ h3 {
 .block {
   background-color: rgba(256,256,256,0.1);
   padding: 1em;
+  margin: 2em 0;
+  padding-left: 5vw;
   transition: 600ms ease;
 }
 
@@ -45,4 +39,37 @@ h3 {
 
 .description {
   max-width: 40em;
+}
+
+.expandButton{
+  height: calc(1.5vw + 1.5em);
+  width: calc(5vw + 5em);
+  margin: 1.5em auto 0 auto;
+  overflow: hidden;
+  transition: 600ms ease;
+}
+
+.leftsidearrow, .rightsidearrow{
+  display: inline-block;
+  margin: 0;
+  margin-top: calc(1vw + 1em);
+  border-width: 0;
+  height: 0.3em;
+  width: 50%;
+  background-color: white;
+  transition: 600ms ease;
+}
+
+.leftsidearrow{
+  transform-origin: right;
+  transform: rotate(20deg) translateX(1px);
+}
+
+.rightsidearrow{
+  transform-origin: left;
+  transform: rotate(-20deg) translateX(-1px);
+}
+
+.block:hover .expandButton{
+  height: 0px;
 }

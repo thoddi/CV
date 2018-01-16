@@ -26,7 +26,7 @@ h3 {
   transition: 600ms ease;
 }
 
-.block:hover {
+.selected{
   background-color: white;
   color: black;
 }
@@ -70,6 +70,15 @@ h3 {
   transform: rotate(-20deg) translateX(-1px);
 }
 
-.block:hover .expandButton{
+.expandButton.up{
+  transform: rotateX(180deg);
+}
+
+.expandButton.up .rightsidearrow,
+.expandButton.up .leftsidearrow{
+  background-color: black;
+}
+
+.expandButton.hover{
   height: 0px;
 }

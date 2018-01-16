@@ -4,9 +4,9 @@
   </h1>
 
   <div class="section">
-    <div class="block" #RU (mouseover)="expandDescription(RU)"
-                           (mouseleave)="collapseDescription(RU)"
-                           (click)="onBlockClick(RU)">
+    <div class="block" #RU (click)="onBlockClick(RU)"
+                           (mouseover)="onBlockHover(RU)"
+                           (mouseleave)="onBlockLeave(RU)">
       <h3>2013 - 2017 | Reykjavik University</h3>
       <h2>Bachelor Degree in Computer Science</h2>
       <div class="wrapper">
@@ -19,8 +19,9 @@ Node.JS and ASP.NET Core.</h3>
         <div class="leftsidearrow"></div><div class="rightsidearrow"></div>
       </div>
     </div>
-    <div class="block" #COK (mouseover)="expandDescription(COK)"
-                            (mouseleave)="collapseDescription(COK)">
+    <div class="block" #COK (click)="onBlockClick(COK)"
+                            (mouseover)="onBlockHover(COK)"
+                            (mouseleave)="onBlockLeave(COK)">
       <h3>2008 – 2012 | College of Kopavogur</h3>
       <h2>Business and Economics</h2>
       <div class="wrapper">
@@ -41,8 +42,9 @@ Node.JS and ASP.NET Core.</h3>
   </h1>
 
   <div class="section">
-    <div class="block" #VAL (mouseover)="expandDescription(VAL)"
-                            (mouseleave)="collapseDescription(VAL)">
+    <div class="block" #VAL (click)="onBlockClick(VAL)"
+                            (mouseover)="onBlockHover(VAL)"
+                            (mouseleave)="onBlockLeave(VAL)">
       <h3>2016 | Final Project - Valitor</h3>
       <h2>Programmer / UI designer</h2>
       <div class="wrapper">
@@ -54,8 +56,9 @@ was written in .Net.</h3>
         <div class="leftsidearrow"></div><div class="rightsidearrow"></div>
       </div>
     </div>
-    <div class="block" #EL (mouseover)="expandDescription(EL)"
-                            (mouseleave)="collapseDescription(EL)">
+    <div class="block" #EL (click)="onBlockClick(EL)"
+                           (mouseover)="onBlockHover(EL)"
+                           (mouseleave)="onBlockLeave(EL)">
       <h3>2013 – Present | ELKO</h3>
       <h2>Salesman</h2>
       <div class="wrapper">

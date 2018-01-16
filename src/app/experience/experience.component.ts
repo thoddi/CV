@@ -6,49 +6,71 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  wrapper: HTMLElement;
-  //buttonArrow: HTMLElement;
-  Element: HTMLElement;
+  hoverWrapper: HTMLElement;
+  hoverArrow: HTMLElement;
+  clickedWrapper: HTMLElement;
+  clickedArrow: HTMLElement;
   constructor() {
-      this.wrapper = undefined;
-      //this.buttonArrow = undefined;
-      this.Element = undefined;
+      this.hoverWrapper = undefined;
+      this.hoverArrow = undefined;
+      this.clickedWrapper = undefined;
+      this.clickedArrow = undefined;
   }
 
   ngOnInit() {
   }
 
-  expandDescription(e: HTMLElement): void {
-    this.Element = e;
-    this.wrapper = <HTMLElement>e.children[2];
-    //this.buttonArrow = <HTMLElement>e.children[3];
-    let textBox = <HTMLElement>this.wrapper.children[0];
-
-    this.wrapper.style.height = textBox.clientHeight + "px";
+  private expandWrapper(wrapper: HTMLElement): void {
+    let textBox = <HTMLElement>wrapper.children[0];
+    wrapper.style.height = textBox.clientHeight + "px";
   }
 
-  collapseDescription(e: HTMLElement): void {
-    this.wrapper.style.height = "0px";
-    this.wrapper = this.Element = undefined;
+  private collapseWrapper(wrapper: HTMLElement): void {
+    wrapper.style.height = "0px";
+  }
+
+  onBlockHover(e: HTMLElement): void {
+    this.hoverWrapper = <HTMLElement>e.children[2];
+    // can't hover over a clicked
+    if(this.hoverWrapper == this.clickedWrapper) {
+      this.hoverWrapper = undefined;
+      return;
+    }
+    this.expandWrapper(this.hoverWrapper);
+    e.classList.add("selected");
+    this.hoverArrow = <HTMLElement>e.children[3];
+    this.hoverArrow.classList.add("hover");
+  }
+
+  onBlockLeave(e: HTMLElement): void {
+    if(this.hoverWrapper != undefined) {
+      this.collapseWrapper(this.hoverWrapper);
+      this.hoverWrapper = undefined;
+      e.classList.remove("selected");
+      this.hoverArrow.classList.remove("hover");
+    }
   }
 
   onBlockClick(e: HTMLElement): void {
-    if(this.Element != e) {
-      console.log("What's going on here?");
-      this.colOrExp(e);
-    }
-  }
+    let wrapper = <HTMLElement>e.children[2];
+    if(wrapper == this.hoverWrapper) return; //can't click while hovering
 
-  colOrExp(e: HTMLElement): void {
-    let arrowBtn = <HTMLElement>e.children[3];
-    let classIndex: number = arrowBtn.classList.length;
-    if(arrowBtn.classList[classIndex - 1] == "up") {
-      arrowBtn.classList.remove("up");
-      this.collapseDescription(e);
+    // if clickedWrapper is not undefined, it has to be closed.
+    if(this.clickedWrapper != undefined) {
+      this.collapseWrapper(this.clickedWrapper);
+      this.clickedArrow.classList.remove("up");
+      this.clickedWrapper.parentElement.classList.remove("selected");
     }
-    else {
-      arrowBtn.classList.add("up");
-      this.expandDescription(e);
+    // if the new wrapper is the same as the old, the function is over.
+    if(wrapper == this.clickedWrapper) {
+      this.clickedWrapper = undefined;
+      return;
     }
+    // the selected wrapper is opened.
+    this.clickedArrow = <HTMLElement>e.children[3];
+    this.clickedWrapper = wrapper;
+    this.expandWrapper(wrapper);
+    this.clickedArrow.classList.add("up");
+    e.classList.add("selected");
   }
 }

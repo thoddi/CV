@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  hoverWrapper: HTMLElement;
-  hoverArrow: HTMLElement;
+  /*hoverWrapper: HTMLElement;
+  hoverArrow: HTMLElement;*/
   clickedWrapper: HTMLElement;
   clickedArrow: HTMLElement;
   constructor() {
-      this.hoverWrapper = undefined;
-      this.hoverArrow = undefined;
+      /*this.hoverWrapper = undefined;
+      this.hoverArrow = undefined;*/
       this.clickedWrapper = undefined;
       this.clickedArrow = undefined;
   }
@@ -29,7 +29,7 @@ export class ExperienceComponent implements OnInit {
     wrapper.style.height = "0px";
   }
 
-  onBlockHover(e: HTMLElement): void {
+  /*onBlockHover(e: HTMLElement): void {
     this.hoverWrapper = <HTMLElement>e.children[2];
     // can't hover over a clicked
     if(this.hoverWrapper == this.clickedWrapper) {
@@ -49,11 +49,11 @@ export class ExperienceComponent implements OnInit {
       e.classList.remove("selected");
       this.hoverArrow.classList.remove("hover");
     }
-  }
+  }*/
 
   onBlockClick(e: HTMLElement): void {
     let wrapper = <HTMLElement>e.children[2];
-    if(wrapper == this.hoverWrapper) return; //can't click while hovering
+    //if(wrapper == this.hoverWrapper) return; //can't click while hovering
 
     // if clickedWrapper is not undefined, it has to be closed.
     if(this.clickedWrapper != undefined) {

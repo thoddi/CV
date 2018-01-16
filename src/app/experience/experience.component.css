@@ -19,6 +19,7 @@ h3 {
 }
 
 .block {
+  cursor: pointer;
   background-color: rgba(256,256,256,0.1);
   padding: 1em;
   margin: 2em 0;
@@ -26,7 +27,8 @@ h3 {
   transition: 600ms ease;
 }
 
-.selected{
+.block.selected,
+.block:hover{
   background-color: white;
   color: black;
 }
@@ -47,6 +49,10 @@ h3 {
   margin: 1.5em auto 0 auto;
   overflow: hidden;
   transition: 600ms ease;
+}
+
+.expandButton.up{
+  transform: rotateX(180deg);
 }
 
 .leftsidearrow, .rightsidearrow{
@@ -70,15 +76,13 @@ h3 {
   transform: rotate(-20deg) translateX(-1px);
 }
 
-.expandButton.up{
-  transform: rotateX(180deg);
-}
-
 .expandButton.up .rightsidearrow,
-.expandButton.up .leftsidearrow{
+.expandButton.up .leftsidearrow,
+.block:hover .rightsidearrow,
+.block:hover .leftsidearrow{
   background-color: black;
 }
 
-.expandButton.hover{
+/*.expandButton.hover{
   height: 0px;
-}
+}*/
